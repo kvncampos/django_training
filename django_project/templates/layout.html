@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block head %}{% endblock %} <!-- Additional styles or scripts can go here -->
+        <title>{% block title %}Django App{% endblock %}</title> <!-- This will be set by the view -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>{% block header %}{% endblock %}</header>
+        <nav>
+            <a href="{% url 'home' %}">&#x1F3E0; Home<a> |
+            <a href="{% url 'about' %}">&#x2139; About<a> |
+            <a href="{% url 'posts:list' %}">&#x1F4D6; Posts<a> |
+        </nav>
+        <main>
+            <!-- Content goes in this block -->
+            {% block body %}
+            {% endblock %}
+        </main>
+    </body>
+</html>
