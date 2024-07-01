@@ -2,19 +2,13 @@
 {% load static %}
 
 {% block head %}
-    {{ block.super }} <!-- Include any styles or scripts from the parent -->
 {% endblock %}
 
 {% block title %}
     {{ post.title }}
 {% endblock %}
 
-{% block header %}
-    {{ block.super }} <!-- Include any content from the parent -->
-{% endblock %}
-
 {% block body %}
-    {{ block.super }} <!-- Include any content from the parent -->
     {% if post %}
     <section>
         <img class="banner" src="{{ post.banner.url }}" alt="{{ post.title }}"/>

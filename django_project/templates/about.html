@@ -2,17 +2,11 @@
 {% load static %}
 
 {% block head %}
-    {{ block.super }} <!-- Include any styles or scripts from the parent -->
     <script src="{% static 'js/main.js' %}" defer></script>
 {% endblock %}
 {% block title %}About{% endblock %}
 
-{% block header %}
-    {{ block.super }} <!-- Include any content from the parent -->
-{% endblock %}
-
 {% block body %}
-    {{ block.super }} <!-- Include any content from the parent -->
     <h1>About</h1> <!-- Insert your own HTML here -->
     <p>Check out my <a href="/about">About</a> page.</p>
 {% endblock %}

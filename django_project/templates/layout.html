@@ -10,10 +10,11 @@
     </head>
     <body>
         <header>{% block header %}{% endblock %}</header>
-        <nav>
-            <a href="{% url 'home' %}">&#x1F3E0; Home<a> |
-            <a href="{% url 'about' %}">&#x2139; About<a> |
-            <a href="{% url 'posts:list' %}">&#x1F4D6; Posts<a> |
+        <nav class='navbar'>
+            <a href="{% url 'home' %}">&#x1F3E0; Home</a> |
+            <a href="{% url 'about' %}">&#x2139; About</a> |
+            <a href="{% url 'posts:list' %}">&#x1F4D6; Posts</a> |
+            <a href="{% url 'users:register' %}">&#x1F64B; Register</a> |
         </nav>
         <main>
             <!-- Content goes in this block -->
